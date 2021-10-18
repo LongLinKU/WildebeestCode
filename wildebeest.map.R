@@ -1,5 +1,7 @@
 library(maptools)
 library(dplyr)
+library("readxl")
+
 
 data(wrld_simpl)
 afr=wrld_simpl[wrld_simpl$REGION==2,]
@@ -7,7 +9,7 @@ afr=wrld_simpl[wrld_simpl$REGION==2,]
 # We can visualize the region's boundaries with the plot function
 plot(afr,border="gray",lwd=0.5)
 
-library("readxl")
+
 data <- read_excel("/home/xiaodong/Downloads/wildebeest.xlsx", sheet = "Sheet1")
 head(data)
 
